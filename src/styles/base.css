@@ -1,0 +1,80 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #36483b;
+  background: #f4f2e9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; }
+a { color: inherit; text-decoration: none; }
+button:focus-visible, a:focus-visible { outline: 3px solid #78967b; outline-offset: 5px; }
+
+.page {
+  min-height: 100svh;
+  max-width: 1240px;
+  padding: 32px 64px 24px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.page-header, .page-footer, .room-card-heading, .room-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wordmark { display: inline-flex; align-items: center; gap: 11px; font-size: 15px; font-weight: 650; letter-spacing: 1px; }
+.brand-mark { width: 43px; height: 43px; display: grid; place-items: center; background: #e4e8db; border-radius: 14px; }
+.brand-mark svg { width: 30px; height: 30px; }
+.wordmark-en { display: block; margin-top: 5px; font-size: 8px; letter-spacing: 2px; font-weight: 550; color: #8d9988; }
+.environment-pill { display: inline-flex; align-items: center; gap: 8px; padding: 9px 13px; border: 1px solid #dce2d5; border-radius: 99px; color: #73806e; font-size: 11px; }
+.status-dot { width: 6px; height: 6px; border-radius: 50%; background: #90a77f; }
+.main-layout { flex: 1; display: grid; grid-template-columns: 1fr 420px; align-items: center; gap: 64px; padding: 50px 0; }
+.intro { padding-bottom: 14px; }
+.eyebrow { margin: 0 0 26px; font-size: 10px; letter-spacing: 2px; font-weight: 650; color: #88947e; }
+.eyebrow span { font-size: 19px; vertical-align: -2px; margin-right: 7px; }
+h1 { font-size: clamp(34px, 4.1vw, 51px); line-height: 1.5; font-weight: 580; letter-spacing: -1.8px; margin: 0; }
+.title-accent { color: #78936d; }
+.description { color: #8b9382; font-size: 13px; line-height: 2.1; margin: 24px 0 31px; }
+.wake-button { background: #49654d; color: #fffef8; border: 0; border-radius: 13px; padding: 15px 20px; min-width: 150px; display: inline-flex; align-items: center; justify-content: space-between; gap: 30px; cursor: pointer; font-size: 12px; box-shadow: 0 6px 15px #49654d13; transition: transform 150ms, background 150ms; }
+.wake-button:hover:not(:disabled) { background: #3e5842; transform: translateY(-2px); }
+.wake-button:active:not(:disabled) { transform: translateY(1px); }
+.wake-button:disabled { opacity: 0.55; cursor: progress; }
+.button-arrow { font-size: 18px; line-height: 1; }
+.ready-panel { display: flex; align-items: center; gap: 10px; margin-top: 35px; }
+.ready-icon { width: 23px; height: 23px; border-radius: 50%; display: grid; place-items: center; background: #e6eadb; color: #809573; font-size: 11px; }
+.ready-panel p { margin: 0; font-size: 11px; letter-spacing: 0.3px; color: #7d8b72; }
+.ready-panel .ready-detail { margin-top: 5px; color: #a1a895; font-size: 9px; letter-spacing: 0.6px; }
+.room-card { width: 100%; overflow: hidden; padding: 0 18px; border: 1px solid #e2e3d6; border-radius: 25px; background: #faf8f0; box-shadow: 0 20px 65px #59654a0b, 0 3px 10px #59654a03; }
+.room-card-heading { padding: 23px 7px 0; color: #8c977e; font-size: 9px; letter-spacing: 1.6px; }
+.room-label { letter-spacing: 1px; font-size: 10px; color: #a2aa92; }
+.game-host { width: 100%; aspect-ratio: 4 / 5; overflow: hidden; touch-action: none; }
+.game-host canvas { display: block; }
+.room-card-footer { min-height: 57px; padding: 10px 7px 19px; color: #97a08a; font-size: 10px; letter-spacing: 0.3px; }
+.interaction-symbol { color: #a9b39b; font-size: 23px; }
+.page-footer { color: #a4aa99; font-size: 9px; letter-spacing: 1px; }
+
+@media (min-width: 1500px) { .main-layout { padding-top: 70px; padding-bottom: 70px; } }
+@media (max-width: 950px) { .page { padding-right: 35px; padding-left: 35px; } .main-layout { grid-template-columns: 1fr 370px; gap: 30px; } }
+@media (max-width: 760px) {
+  .page { padding: 24px 24px 22px; max-width: 490px; }
+  .main-layout { display: flex; flex-direction: column; gap: 28px; padding: 40px 0 30px; }
+  .intro { align-self: stretch; padding: 0 4px; }
+  .eyebrow { margin-bottom: 17px; font-size: 9px; }
+  h1 { font-size: 36px; line-height: 1.45; letter-spacing: -1px; }
+  .description { font-size: 12px; line-height: 1.9; margin: 17px 0 21px; }
+  .wake-button { padding: 12px 16px; min-width: 135px; }
+  .ready-panel { display: inline-flex; margin: 0 0 0 16px; vertical-align: middle; }
+  .ready-panel .ready-detail { font-size: 8px; letter-spacing: 0; }
+  .ready-icon { display: none; }
+  .environment-pill { font-size: 9px; padding: 8px 9px; }
+  .wordmark { font-size: 13px; gap: 8px; }
+  .brand-mark { width: 36px; height: 36px; border-radius: 12px; }
+  .room-card { border-radius: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .wake-button { transition: none; } }

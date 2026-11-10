@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f2e9" />
+    <meta name="description" content="会长大的房间，一个关于怪宠与生活的小小实验。" />
+    <title>会长大的房间 · Growing Room</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="page-header">
+        <a class="wordmark" href="./" aria-label="会长大的房间首页">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M7 25V14.5L16 7l9 7.5V25H7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+              <path d="M12 19v2m8-2v2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+              <path d="M16 7c-1-3 1-5 4-5 0 3-1 5-4 5Z" fill="currentColor" />
+            </svg>
+          </span>
+          <span>会长大的房间<span class="wordmark-en">GROWING ROOM</span></span>
+        </a>
+        <div class="environment-pill"><span class="status-dot" aria-hidden="true"></span>本地开发空间</div>
+      </header>
+
+      <main class="main-layout">
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow"><span aria-hidden="true">✳</span> A SMALL BEGINNING</p>
+          <h1 id="page-title">小小的房间，<br />正在<span class="title-accent">醒来。</span></h1>
+          <p class="description">光照进来，叶子轻轻晃动。<br />碰一碰这个小家，看看谁在回应你。</p>
+          <button id="wake-room" class="wake-button" type="button" disabled>
+            <span>打个招呼</span><span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+          <div class="ready-panel" role="status" aria-live="polite">
+            <span class="ready-icon" aria-hidden="true">✓</span>
+            <div><p id="environment-status">正在唤醒房间</p><p class="ready-detail">Phaser · TypeScript · Vite</p></div>
+          </div>
+        </section>
+
+        <section class="room-card" aria-label="可互动的小房间">
+          <div class="room-card-heading"><span>ROOM 001</span><span class="room-label">第一缕阳光</span></div>
+          <div id="game" class="game-host" data-game-ready="false" data-interaction-count="0" role="img" aria-label="奶油色的小房间里，一只绿色怪宠正在休息。可以点击房间，或使用打个招呼按钮与它互动。"></div>
+          <div class="room-card-footer">
+            <span id="interaction-status" aria-live="polite">点击或轻触，和房间打个招呼</span>
+            <span class="interaction-symbol" aria-hidden="true">⌁</span>
+          </div>
+        </section>
+      </main>
+
+      <footer class="page-footer"><span>一个会慢慢长大的小实验</span><span>环境验证 · 01</span></footer>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
